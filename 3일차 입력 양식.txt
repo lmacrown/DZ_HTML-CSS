@@ -1,0 +1,58 @@
+JDBC 실행방법
+1. 드라이버 로딩
+2. DB 서버 연결
+3. Select 구문 실행
+1) preparedstatement 객체 생성
+2) 인자 전달
+3) executeQuery
+4) 결과 집합을 읽음(resultset)
+5) 결과가 존재하면 DB에서 값을 읽는다
+6) DB에 있는 값과 사용자가 전달한 값이 같은지 확인
+4. 연결 해제
+
+5장
+모든 라이브러리는 lib>ext 파일에 넣으면 모두 작동됨
+<label> : 해당 이름을 클릭하면 for=" "에 해당하는 입력란에 커서가 감
+<select> : 선택목록
+<option> : 서버로 넘겨주는 값 설정
+size : 드롭다운 항목의 개수를 지정
+multiple : 드롭다운 목록에서 둘 이상의 항목 선택
+<datalist> :  데이터 목록의 시작과 끝을 표시
+
+input type
+- txt : 한 줄짜리 텍스트 입력 박스
+- password : 비밀번호 필드
+- search : 검색 필드
+- url :  url주소 입력필드
+- email : 이메일 주소 필드
+- tel : 전화번호 입력 필드
+- checkbox : 2개 이상 선택하는 체크 박스
+- radio : 1개만 선택가능한 체크 박스
+- number : 숫자 조절이 가능한 스핀 박스
+- range : 숫자를 조절할 수 있는 슬라이드 막대
+- date : 사용자 날짜를 넣음
+- time : 사용자 지역 기준 시간을 넣음
+- datetime : 국제 표준시간
+- datetime-local : 사용자가 있는 지역 시간
+- submit : 전송버튼
+- reset : 리셋 버튼
+- image : submit 버튼 대신하는 이미지
+- button : 일반 버튼
+- file : 파일 첨부 버튼
+- hidden : 사용자에게 보이지 않고 서버로 값 넘기는 필드(4G)
+- size : 보일 필드의 길이 설정
+- value : 화면 표시 전까지 필드에 보여지는 내용
+- maxlength : 필드에 입력가능한 최대 문자 수
+- autofocus : 폼에 자동으로 마우스 포인터 표시
+- placeholder : 입력란에 힌트 내용 표시
+- required : 필수 입력란
+- readonly : 읽기 전용 필드
+- textarea : 메모 가능한 필드
+
+숫자 입력 필드 속성
+- min : 필드 입력 최솟값
+- max : 필드 입력 최댓값
+- step : 숫자 간격 지정
+- value : 필드 표시 초깃값
+
+
