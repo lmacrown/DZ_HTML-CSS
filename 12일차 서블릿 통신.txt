@@ -1,0 +1,81 @@
+8장
+포워드 : 하나의 서블릿에서 다른 서블릿이나 JSP와 연동하는 방법
+포워드 기능
+- 요청에 대한 추가 작업을 다른 서블릿에게 수행
+- 요청에 포함된 정보를 다른 서블릿이나 JSP와 공유할 수 있음
+- 요청에 정보를 포함시켜 다른 서블릿에 전달
+- 모델2 개발 시 서블릿에서 JSP로 데이터를 전달하는 데 사용
+MVC2 : 하나의 Servlet이 받아 그 결과를 JSP 페이지로 전달. 유지보수와 확장에 용이
+Model(데이터관리) : 리포지토리 또는 DAO
+View(출력) : JSP(HTML)
+Controller(연동) : View와 Model을 연결. Servlet
+ServeltContext : 전역변수 선언
+request : 지역변수 저장
+포워딩 방법
+- Redirect : 서블릿의 요청이 클라이언트의 웹 브라우저를 다시 거쳐 요청되는 방식
+서블릿에 바인딩한 데이터를 다른 서블릿으로 전송할 수 없음
+- Refresh : 서블릿의 요청이 클라이언트의 웹 브라우저를 다시 거쳐 요청되는 방식
+차이점 : 뒤로가기
+- Location : 자바스크립트에서 재요청하는 방식
+- Dispatch : 서블릿이 직접 요청하는 방법. URL이 변경되지 않음
+값을 넘길때는 dispatch
+바인딩  : 웹 프로그램 실행 시 자원을 서블릿 관련 객체에 저장하는 방법으로 
+저장된 자원은 프로그램 실행 시 서블릿이나 JSP에서 공유하여 사용
+바인딩 관련 메서드
+- setAttribute : 자원을 각 객체에 바인딩
+- getAttribute : 각 객체에 바인딩된 자원을 매개변수로 가져옴
+- removeAttribute : 각 객체에 바인딩된 자원을 매개변수로 제거
+ServletContext : 웹 애플리케이션이 실행되면서 애플리케이션 전체의 공통 자원이나 
+정보를 미리 바인딩해서 서블릿들이 공유하여 사용
+ServletContext 특징
+- 서블릿과 컨테이너 간의 연동을 위해 사용
+- 컨텍스트마다 하나의 ServletContext가 생성
+- 서블릿끼리 자원을 공유하는 데 사용
+- 컨테이너 실행 시 생성되고 컨테이너 종료 시 소멸
+ServletContext 제공하는 기능
+- 서블릿에서 파일 접근 기능
+- 자원 바인딩 기능
+- 로그 파일 기능
+- 컨텍스트에서 제공하는 설정 정보 제공 기능
+웹 애플리케이션 관리
+getServletContext()-getRealPath : 파일의 절대 경로를 알아옴
+ServletConfig : servletContext 객체를 얻는데 사용
+context-param : 전역변수
+init-param : 지역변수
+getInitParameter() : 매개변수로 web.xml에서 지정했던 변수를 가져옴
+@WebServlet애노테이션 설정 
+- urlPatterns : 웹 브라우저에서 서블릿 요청 시 사용하는 매핑 이름
+- name : 서블릿 이름
+- loadOnStartup : 컨테이너 실행 시 서블릿이 로드되는 순서 지정
+- description : 서블릿에 대한 설명
+9장
+세션 트래킹 : 사용자 입장에서 웹 페이지 사이의 상태나 정보를 공유하기 위한 기능
+웹 페이지 연동 방법
+- hidden 태그 : HTML의<hidden>태그를 이용해 웹 페이지들 사이의 정보를 공유
+- URL Rewriting : Get 방식으로 URL 뒤에 정보를 붙여서 다른 페이지로 전송
+- 쿠키 : 클라이언트 PC의 Cookie파일에 정보를 저장한 후 웹 페이지들이 공유
+- 세션 : 서버 메모리에 정보를 저장한 후 웹 페이지들이 공유
+persistence 쿠키 : 클라이언트에 파일로 정보를 저장하는 기능
+path : 쿠키 디렉터리 정보
+expires : 쿠키 만료시간
+쿠키 실행 과정
+1. 브라우저 사이트에 접속
+2. 서버는 정보를 저장한 쿠키를 생성
+3. 생성된 쿠키를 브라우저로 전송
+4. 브라우저는 서버로부터 받은 쿠키 정보를 쿠키 파일에 저장
+5. 브라우저가 다시 접속해 서버가 브라우저에게 쿠키 전송을 요청하면 브라우저는 쿠키 정보를 서버에 넘김
+6. 서버는 쿠키 정보를 이용해 작업
+브라우저 하나당 세션 하나
+쿠키 메서드
+- getAttribute : 속성이름이 매개변수인 값을 Object타입으로 반환
+- getAttributeNames() : 세션 속성 이름들을 Enumeration 객체 타입으로 반환
+- getCreationTime() : 세션이 생성된 시간까지 경과한 시간을 계산
+- getId() : 세션에 할당된 고유 식별자를 String타입으로 반환
+- getmaxInactiveInterval() : 현재 생성된 세션을 유지하는 시간을 int 타입으로반환
+- invalidate() : 현재 생성된 세션을 소멸
+- setmaxInactiveInterval() : 세션 유지 시간을 지정
+session-config : 세션 정보 설정
+invalidate() : 기존에 저장된 세션 정보를 모두 초기화
+
+
+
