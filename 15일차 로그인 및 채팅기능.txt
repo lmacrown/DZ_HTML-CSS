@@ -1,0 +1,40 @@
+jsp
+p547
+c:set :변수선언. 변수 설정을 두번이상 할 수 있음
+c:remve : 변수 제거
+c:if : 조건문 사용. else 부분이 없음
+c:choose : switch문을 사용. when과 otherwise 서브 태그를 가짐
+c:forEach : 반복문을 사용
+c:redirect : 함수 실행후 redirect 기능 수행
+비동기 통신 : request에 대한 response를 기다리지 않고 request를 보내는 방식
+데이터 처리
+1. html
+2. innerhtml(json)
+3. innerhtml(html)
+AJAX :  XMLHttpRequest 객체를 이용해 페이지의 일부 데이터만 로드하는 기법(잘안씀)
+fetch : 자바스크립트 사용할 때 필요 시 서버에 네트워크 요청을 보내고 새로운 정보를 받아오는 일을 함
+- 주문 전송
+- 사용자 정보 읽기
+- 서버에서 최신 변경분 가져오기
+상태코드 : 클라이언트가 보낸 요청의 처리 상태를 응답에서 알려주는 기능
+- 1XX : 요청이 수신되어 처리중
+- 2XX : 요청 정상 처리
+- 3XX : 요청을 완료하려면 추가 행동이 필요
+- 4XX : 클라이언트 오류
+- 5XX : 서버 오류
+delims : 문자를 해당 매개변수로 나눔
+async : 
+onblur : 
+웹 소켓 : 브라우저가 접속요청을 하고 Web 서버가 응답한 후 연결을 끊지 않음
+Connection을 그대로 유지하고 브라우저의 요청이 없어도 데이터를 전송할 수 있는 프로토콜
+폴링 : 하나의 장치가 충돌 회피 또는 동기화 처리 등을 목적으로 다른 장치의 상태를 
+주기적으로 검사하여 일정한 조건을 만족할 때 송수신 등의 자료처리를 하는 방식
+OnOpen : 
+OnMessage : 
+OnClose : 
+OnError : 
+
+
+
+
+
