@@ -33,7 +33,7 @@ JS 특수기호
 - &nbsp; : 띄어쓰기 한칸
 - &gt; : > 
 - &lt; : <
-searchForm.submit() : 
+searchForm.submit() : Form객체안의 데이터를 전송
 
 
 
