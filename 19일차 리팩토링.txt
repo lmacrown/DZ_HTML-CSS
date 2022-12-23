@@ -22,3 +22,9 @@ web.xml->jsp(프론트엔드)->servlet->action->DAO->servlet->출력
 web.xml : 서블릿 클래스를 지정하고 변수명과 매핑할 주소 및 메서드를 입력함
 servlet : init을 통하여 web.xml에 저장한 변수명과 매핑할 주소를 받아옴
 doget을 통하여 jsp에서 받아온 데이터를 init에 있는 값과 비교하여 action에 연결함
+invoke : 함수를 호출해주는 메서드. ()와 같은 기능을 함. 객체와 인자를 받아서 실행함
+=> 밑의 함수를 요약함
+{
+MemberAction memberAction = new MemberAction();
+memberAction.loginCheck(request, response)
+};
