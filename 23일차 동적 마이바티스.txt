@@ -1,0 +1,48 @@
+인자 전달 2가지의 방법이 있음 
+1. 클래스를 이용하는 방법
+MemberVo param = MemeberVo.build().uid(uid).pwd(pwd).build();
+2. Map 객체를 이용하는 방법
+Map<String, String> param = new HashMap<>();
+param.put("uid",uid);
+파라미터 타입은 java.util.Map
+
+마이바티스 동적 SQL : 공통 SQL문에 대해 조건값의 유무에 따라 동적으로 공통 SQL문에 조건절을 추가
+동적 SQL 특징
+- SQL문의 조건절에서 사용
+- 조건절에 조건을 동적으로 추가
+- JSTL과 XML기반으로 동적 SQL문 작성
+동적 SQL 요소
+- if : <where>절로 if문을 감싸여 조건 검색을 함. 
+구문오류가 발생할 수 있으므로 where 1=1을 넣고 if절에 and를 넣어서 실행
+- choose : switch문과 같은 기능을 구현
+- trim 
+- foreach : 여러 개의 데이터 처리
+foreach 태그 속성
+- collection : 전달받은 인자 값을 의미. 배열 전달시에는 array로 표시
+- index : foreach문이 반복될 때마다 값이 증하가며 값의 위치를 나타냄
+- item : collection 속성에 지정된 값에 접근하여 차례대로 사용
+- open : 해당 구문이 시작될 떄의 지정한 기호 추가
+- close : 해당 구문이 끝날 때의 지정한 기호 추가
+- separator : 한 번 이상 반복될 떄 바복되는 사이에 지정한 기호 추가
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
