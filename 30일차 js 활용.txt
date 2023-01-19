@@ -1,0 +1,14 @@
+select format(변수명, 0) 별명 ~ : 숫자 3개마다 , 를 찍어서 출력
+crcn : (엔터키)를 다음 문자열로 변환
+onsubmit return false : 함수가 제대로 실행되지 않으면 action이 실행되지 않음
+visibility:hidden 으로 설정하여 해당 div안의 모든것들을 가림
+SQL-offset : 원하는 행의 수 만큼 건너뛰고 출력
+
+<select id="getCodeName" resultType="String">
+	SELECT getCodeName(#{codeId}) 
+</select>
+
+@PostMapping = @RequestMapping(method = RequestMethod.POST)
+<a href="javascript:" onClick="javascript:imagePopup();"> 
+@EqualsAndHashCode(callSuper=false) : 두 객체가 같은 객체인지 비교(자신 클래스의 필드 값만 고려)
+cloneNode(true) : 원본 내용을 똑같이 복사함
